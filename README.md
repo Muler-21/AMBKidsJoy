@@ -2,6 +2,8 @@
 
 # AMBKidsJoy — Learning Hub, Grades 1 to 8
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24115584.svg)](https://doi.org/10.5281/zenodo.24115584)
+
 **AMBKidsJoy** is a free, bilingual (Amharic / English) interactive learning hub for children from Grade 1 to Grade 8.
 
 **Available now: Grades 1 to 7.**
@@ -44,7 +46,7 @@ AMBKidsJoy was made so that every child can learn with joy. If it helps you, ple
 
 If you use AMBKidsJoy in teaching, research or your own materials, please cite it:
 
-> Bitew, M. K. (2026). *AMBKidsJoy: A free bilingual Amharic–English interactive learning hub for Grades 1–7* [Web application]. https://muler-21.github.io/AMBKidsJoy/
+> Bitew, M. K. (2026). *AMBKidsJoy: A free bilingual Amharic–English interactive learning hub for Grades 1–7* [Web application]. Zenodo. https://doi.org/10.5281/zenodo.24115584
 
 ```bibtex
 @misc{bitew2026ambkidsjoy,
@@ -52,7 +54,9 @@ If you use AMBKidsJoy in teaching, research or your own materials, please cite i
   title        = {{AMBKidsJoy}: A free bilingual {Amharic}--{English} interactive learning hub for Grades 1--7},
   year         = {2026},
   howpublished = {Web application},
-  url          = {https://muler-21.github.io/AMBKidsJoy/},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.24115584},
+  url          = {https://doi.org/10.5281/zenodo.24115584},
   note         = {ORCID: 0000-0001-6223-0037. Licensed CC BY-NC-SA 4.0}
 }
 ```
