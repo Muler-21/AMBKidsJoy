@@ -6,7 +6,7 @@
 
 **AMBKidsJoy** is a free, bilingual (Amharic / English) interactive learning hub for children from Grade 1 to Grade 8.
 
-**Available now: Grades 1 to 7.**
+**Available now: Grades 1 to 8.**
 
 **Grade 1** (folder `grade-1/`): Mathematics (10 chapters), Amharic (10), English (8 units), Environmental Science (5) and Health & PE (6): 39 chapters with finger-tracing of letters and numbers, counting games, listening (spoken English words), picture matching and movement challenges. Moral Education and Arts come when the books are added.
 
@@ -22,11 +22,13 @@
 
 **Grade 7** (folder `grade-7/`): nine subjects: Mathematics (7), Amharic (10), English (10 units), General Science (7), Social Studies (7), Career & Technical Education (8), Information Technology (6), Health & PE (7) and Performing & Visual Arts (5): 67 chapters with sets, integers, equations and area drills, science calculations (speed, density, force), time-zone, map-scale and population-density drills, history timelines, LOGO turtle shapes, CV and interview practice, grammar in both languages and a Young Innovator project in every chapter.
 
+**Grade 8** (folder `grade-8/`): ten subjects: Mathematics (7), Amharic (10), English (10 units, British English voice), General Science (7), Social Studies (7), Citizenship Education (7), Career & Technical Education (7), Information Technology (6), Health & PE (7) and Performing & Visual Arts (5): 73 chapters with rational numbers, square and cube roots, equations and inequalities, similarity, Pythagoras and circle-angle drills with figures; atoms, pH, Ohm's law and echo calculations; map-scale and climate drills, modern Ethiopian, African and world history timelines; virtue ethics, the state, democracy, the constitution, human rights and conflict resolution; career choice, enterprise, profit and change, employability and business plans; computer generations, hardware, storage units, software, the Internet, ergonomics and LOGO turtle programming; fitness, athletics, gymnastics, ball skills and traditional games; Ethiopian kignit, printing, sculpture and monuments; exam-ready notes and a Young Innovator project in every chapter.
+
 **Joyful English** (folder `joyful/`): eight levels from Grade 1 to university and the workplace (CEFR Pre-A1 to B2–C1). Lesson 1 of every level is ready: listening, a sound target for the sounds Amharic speakers find hard, speaking with the microphone (speech recognition in Chrome or Edge), reading, grammar and writing. More lessons are coming.
 
 **Joyful English Web Book** (folder `joyful/book/`): a free path from first words (Stage 0) to proficiency (Stage 6) plus a Workplace pathway, with a placement check, 33 modules, a searchable catalogue of 623 free resources (British Council, VOA, Cambridge, Purdue OWL and more) labelled by how each was checked, bookmarks, notes and progress tracking. Research report, curriculum blueprint, expansion plan, catalogue (CSV/JSON) and tests are in that folder.
 
-**Coming next:** Grades 5, 6 and 8 and more Joyful English lessons. Every chapter opens with a one-picture summary and a guide for teachers and parents.
+**Coming next:** more Joyful English lessons and more lesson videos. Every chapter opens with a one-picture summary and a guide for teachers and parents.
 
 ▶ **Open the platform:** https://muler-21.github.io/AMBKidsJoy/  
 ▶ **YouTube lessons:** https://www.youtube.com/@kidseducation9276  
@@ -46,12 +48,12 @@ AMBKidsJoy was made so that every child can learn with joy. If it helps you, ple
 
 If you use AMBKidsJoy in teaching, research or your own materials, please cite it:
 
-> Bitew, M. K. (2026). *AMBKidsJoy: A free bilingual Amharic–English interactive learning hub for Grades 1–7* [Web application]. Zenodo. https://doi.org/10.5281/zenodo.24115584
+> Bitew, M. K. (2026). *AMBKidsJoy: A free bilingual Amharic–English interactive learning hub for Grades 1–8* [Web application]. Zenodo. https://doi.org/10.5281/zenodo.24115584
 
 ```bibtex
 @misc{bitew2026ambkidsjoy,
   author       = {Bitew, Mulusew Kassa},
-  title        = {{AMBKidsJoy}: A free bilingual {Amharic}--{English} interactive learning hub for Grades 1--7},
+  title        = {{AMBKidsJoy}: A free bilingual {Amharic}--{English} interactive learning hub for Grades 1--8},
   year         = {2026},
   howpublished = {Web application},
   publisher    = {Zenodo},
@@ -65,8 +67,8 @@ Formats for chapters, videos and songs, plus the attribution line to use when yo
 
 ## Sources
 
-- Amhara National Regional State Education Bureau, in collaboration with the Amhara Council of Scholars: student books, Grades 1–7 (© 2015 E.C., 2022/23; Ge'ez Grade 4 © 2017 E.C.). Chapter structure, learning goals and examples follow these books; they remain the Bureau's copyright.
-- Ministry of Education, Federal Democratic Republic of Ethiopia: English student books, Grades 1–7.
+- Amhara National Regional State Education Bureau, in collaboration with the Amhara Council of Scholars: student books, Grades 1–8 (© 2015 E.C., 2022/23; Ge'ez Grade 4 © 2017 E.C.). Chapter structure, learning goals and examples follow these books; they remain the Bureau's copyright.
+- Ministry of Education, Federal Democratic Republic of Ethiopia: English, Career & Technical Education and Information Technology student books, Grades 1–8.
 - Joyful English: free resources catalogued and linked in `joyful/book/`.
 - Tools: three.js (MIT), Baloo 2 and Noto Sans Ethiopic fonts (SIL OFL 1.1), Microsoft Edge neural voices via edge-tts (LGPL-3.0), FFmpeg, Playwright, GoatCounter.
 - Characters, 3D scenes, song lyrics and music are original to AMBKidsJoy. Nothing is taken from other channels.
@@ -119,6 +121,7 @@ AMBKidsJoy follows these student books. Thank you to their writers. All activiti
 - **Grade 3:** Mathematics (Liulseged Assefa, Kefyalew Shiferaw); Amharic (Hana Filate, Andargachew Mengesha); Environmental Science (Iyasu Adane, Kiros Tareke); Moral Education (Maru Mateos, Kidane Hailu; Amharic © ANRS Education Bureau, 2016 E.C.); Health & PE (Abebe Dese, Belete Assefa); Performing & Visual Arts (Semira Seid, Tehone Bante); Grade 3 English Student's Book.
 - **Grade 4:** Mathematics (Kebede Alemu, Yilma Tsehayu); Amharic (Tsegaye Beyene, Fasil Mekuanint); English for Ethiopia Grade 4 (Melkamu Dumessa PhD, Temesgen Mereba PhD; © FDRE Ministry of Education); Environmental Science (Neknike Zewde, Assefa Yihune); Ge'ez (Muluken Andualem PhD, Gebre Ab Bogale; © 2017 E.C.); Health & PE (Abebe Dese, Belete Assefa); Performing & Visual Arts (Hussen Assen, Asfaw Reta).
 - **Grade 7:** Mathematics (Zelalem Addis, Atalel Alameneh); Amharic (Zewdu Milkit, Meaza Legesse); English (Dr. Haile Shibabaw, Dr. Zewudie Tamiru); General Science (Hassen Worku PhD, Awoke Debebe, Seid Mohammed, Muluneh Workie); Social Studies (Shewanesseh Fisseha, Seid Hussen); Health & PE (Dr. Demisse Gashu, Yimam Arage, Dr. Ambachew Amede); Performing & Visual Arts (Mastewal Geta, Yohannes Tadesse); Career & Technical Education (Getachew Habtamu PhD, Ashenafi Kebede PhD; © FDRE Ministry of Education); Information Technology (Birhanu Hailu PhD, Belete Biazen; © FDRE Ministry of Education).
+- **Grade 8:** Mathematics (Misganaw Mintesnot, Getenet Zerihun); Amharic (Enatnesh Bezabih, Ambaw Demisse); English for Ethiopia (Dr. Cherie Mesfin, Dr. Dawit Amogne; © FDRE Ministry of Education); General Science (Minbale Admas PhD, Dawud Yimer, Getachew Tarekegn PhD); Social Studies (Belay Tsega, Alemayehu Erkyihun PhD); Citizenship Education (Wondwossen Mengistu, Yoseph Watte); Career & Technical Education (Markos Mathewos PhD, Zerhun Ganewo; FDRE Ministry of Education with Hawassa University); Information Technology (Chala Diriba, Workineh Tesema; © FDRE Ministry of Education); Health & PE (Yimam Arage, Dr. Demisse Gashu); Performing & Visual Arts (Habtamu Gizachew, Agmasie Berihun).
 
 Teachers and parents: please report any mistake, especially in the Amharic, Ge'ez and history text, through **Issues**.
 

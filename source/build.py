@@ -71,7 +71,7 @@ if MATH_SRC:
 shutil.copy(os.path.join(DIST, 'home.html'), os.path.join(DIST, 'index.html'))
 
 # ---------- Grades 1, 2 (dist/grade-N/) ----------
-for GN in (1, 2, 4, 5, 6, 7, 'J'):
+for GN in (1, 2, 4, 5, 6, 7, 8, 'J'):
     G1 = os.path.join(SRC, 'joyful' if GN == 'J' else f'grade{GN}')
     if not os.path.isdir(G1): continue
     D1 = os.path.join(DIST, 'joyful' if GN == 'J' else f'grade-{GN}'); os.makedirs(os.path.join(D1, 'units'), exist_ok=True)
@@ -88,7 +88,7 @@ for GN in (1, 2, 4, 5, 6, 7, 'J'):
         uid = os.path.basename(f)[:-3]; short = uid[3:]
         src = open(f, encoding='utf-8').read()
         shutil.copy(f, os.path.join(D1, 'units', uid + '.js'))
-        m = re.search(r"title:\{en:'([^']+)'", src)
+        m = re.search(r"title:\{en:'([^']+)'", src) or re.search(r'Unit\.start\(\{.*?title:\{"en":"([^"]+)"', src)
         html = (HEAD + f'<title>{m.group(1) if m else short} · {GL} · AMBKidsJoy</title>' + FONTS + '<link rel="stylesheet" href="../style.css"></head><body>'
                 f'<script src="../icons.js"></script><script src="../summaries.js"></script><script src="{SUMF}"></script><script src="../summary.js"></script><script src="../engine.js"></script><script src="{KIT}"></script>{EXTRA}'
                 f'<script src="units/{uid}.js"></script><script src="../author.js"></script></body></html>')

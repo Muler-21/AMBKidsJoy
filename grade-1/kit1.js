@@ -109,24 +109,24 @@ function readMissions(d){const M=[];
  return M}
 
 /* English (Grade 1) missions: listening, letter sounds, tracing, spelling, sentences */
-function engMissions(d){const {shuffle}=G3;const M=[];const big=e=>`<span class="emo" style="font-size:2.8rem">${e}</span>`;
+function engMissions(d){const EL=d.lang||'en-US';const {shuffle}=G3;const M=[];const big=e=>`<span class="emo" style="font-size:2.8rem">${e}</span>`;
  M.push({title:{en:'Listen and choose',am:'አዳምጡና ምረጡ'},type:'quiz',shuffle:true,
   tip:{en:'Tap 🔊 to hear the word, say it after me, then tap the right picture.',am:'ቃሉን ለመስማት 🔊 ንኩ፣ ደግማችሁ በሉት፣ ከዚያ ትክክለኛውን ሥዕል ንኩ።'},
   items:d.listen.map(([w,e,am],i)=>{const others=shuffle(d.listen.filter((_,j)=>j!==i)).slice(0,2);const o=shuffle([[w,e,am],...others]);
-   return{say:w,q:{en:'Listen. Which picture is it?',am:'አዳምጡ። የትኛው ሥዕል ነው?'},o:o.map(x=>({svg:big(x[1]),label:''})),a:o.findIndex(x=>x[0]===w),e:{en:`${e} ${w}`,am:`${e} ${w} (${am||''})`}}})});
+   return{say:w,sayLang:EL,q:{en:'Listen. Which picture is it?',am:'አዳምጡ። የትኛው ሥዕል ነው?'},o:o.map(x=>({svg:big(x[1]),label:''})),a:o.findIndex(x=>x[0]===w),e:{en:`${e} ${w}`,am:`${e} ${w} (${am||''})`}}})});
  if(d.letters)M.push({title:{en:'First sounds',am:'የመጀመሪያ ድምፆች'},type:'quiz',shuffle:true,
   tip:{en:'Listen to the word. What sound does it start with? Find the letter.',am:'ቃሉን አዳምጡ። በምን ድምፅ ይጀምራል? ፊደሉን ፈልጉ።'},
   items:d.letters.map(([e,w])=>{const L=w[0].toLowerCase();const pool=shuffle(d.letters.map(x=>x[1][0].toLowerCase()).filter(x=>x!==L));const o=shuffle([L,...[...new Set(pool)].slice(0,2)]);
    return{say:w,fig:`<div class="cnt" style="--per:1">${big(e)}</div>`,q:{en:`${w}: which letter does it start with?`,am:`${w}፦ በየትኛው ፊደል ይጀምራል?`},o:o.map(x=>({svg:`<span class="bigq" style="font-size:2.2rem">${x.toUpperCase()} ${x}</span>`,label:''})),a:o.indexOf(L)}})});
- if(d.trace)M.push({title:{en:'Write the letters',am:'ፊደላቱን ጻፉ'},type:'trace',items:d.trace,say:'en-US',sayText:d.trace.map(x=>x.length===1?x:x),
+ if(d.trace)M.push({title:{en:'Write the letters',am:'ፊደላቱን ጻፉ'},type:'trace',items:d.trace,say:EL,sayText:d.trace.map(x=>x.length===1?x:x),
   tip:{en:'Trace each letter on the dots. Say its name and its sound.',am:'እያንዳንዱን ፊደል በነጥቦቹ ላይ ጻፉ። ስሙንና ድምፁን በሉ።'}});
- if(d.spell)M.push({title:{en:'Spell the word',am:'ቃሉን ጻፉ'},type:'spell',lang:'en-US',
+ if(d.spell)M.push({title:{en:'Spell the word',am:'ቃሉን ጻፉ'},type:'spell',lang:EL,
   tip:{en:'Tap 🔊, listen to every sound, then fill in the missing letters.',am:'🔊 ንኩ፣ እያንዳንዱን ድምፅ አዳምጡ፣ ከዚያ የጎደሉትን ፊደላት ሙሉ።'},
   words:d.spell.map(x=>({w:x.w,blanks:x.blanks,hint:{en:x.w,am:x.am},fig:big(x.e)}))});
  if(d.sentences)M.push({title:{en:'Make a sentence',am:'ዓረፍተ ነገር ሥሩ'},type:'order',
   tip:{en:'Put the words in order. A sentence starts with a capital letter and ends with a full stop (.) or question mark (?).',am:'ቃላቱን በቅደም ተከተል አስቀምጡ። የእንግሊዝኛ ዓረፍተ ነገር በትልቅ ፊደል ይጀምራል፤ በነጥብ (.) ወይም በጥያቄ ምልክት (?) ያልቃል።'},
   help:{en:'Tap the words in order. Tap 🔊 to hear it.',am:'ቃላቱን በቅደም ተከተል ንኩ። ለመስማት 🔊 ንኩ።'},
-  rounds:d.sentences.map(ws=>({prompt:{en:'Make the sentence:',am:'ዓረፍተ ነገሩን ሥሩ፦'},say:ws.join(' '),sayLang:'en-US',items:ws}))});
+  rounds:d.sentences.map(ws=>({prompt:{en:'Make the sentence:',am:'ዓረፍተ ነገሩን ሥሩ፦'},say:ws.join(' '),sayLang:EL,items:ws}))});
  return M}
 
 /* get-moving mission: children do each exercise and tap once per repetition */

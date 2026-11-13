@@ -1,7 +1,7 @@
 <title>AMBKidsJoy · Learning Hub</title>
-<meta name="description" content="ልጆች በደስታ ይማሩ! Free Amharic–English learning hub from Ethiopian textbooks: Grades 1–7, plus Joyful English.">
+<meta name="description" content="ልጆች በደስታ ይማሩ! Free Amharic–English learning hub from Ethiopian textbooks: Grades 1–8, plus Joyful English.">
 <meta property="og:title" content="AMBKidsJoy · ልጆች በደስታ ይማሩ!">
-<meta property="og:description" content="Free Amharic–English learning hub from Ethiopian textbooks: Grades 1–7, plus Joyful English.">
+<meta property="og:description" content="Free Amharic–English learning hub from Ethiopian textbooks: Grades 1–8, plus Joyful English.">
 <meta property="og:image" content="https://muler-21.github.io/AMBKidsJoy/cover.png">
 <meta property="og:image:width" content="1280"><meta property="og:image:height" content="720">
 <meta property="og:url" content="https://muler-21.github.io/AMBKidsJoy/">
@@ -101,7 +101,7 @@ const SUBJECTS=[
 ];
 const T={
  kicker:{en:'Learning Hub · Grades 1 to 8',am:'የልጆች የደስታ መማሪያ ማዕከል · ከ1ኛ እስከ 8ኛ ክፍል'},
- tag:{en:'Interactive lessons in Amharic and English, with Kokeb the star as your guide. Learn by thinking, playing, experimenting and explaining why. Grades 1 to 7 are ready now, and Grade 8 is on the way.',am:'በአማርኛና በእንግሊዝኛ በይነ-ተግባራዊ ትምህርቶች፤ መሪያችሁ ኮከብ ናት። በማሰብ፣ በመጫወት፣ በመሞከርና ምክንያቱን በማስረዳት ተማሩ። ከ1ኛ እስከ 7ኛ ክፍል አሁን ዝግጁ ናቸው፤ 8ኛ ክፍል በመንገድ ላይ ነው።'},
+ tag:{en:'Interactive lessons in Amharic and English, with Kokeb the star as your guide. Learn by thinking, playing, experimenting and explaining why. Grades 1 to 8 are ready now.',am:'በአማርኛና በእንግሊዝኛ በይነ-ተግባራዊ ትምህርቶች፤ መሪያችሁ ኮከብ ናት። በማሰብ፣ በመጫወት፣ በመሞከርና ምክንያቱን በማስረዳት ተማሩ። ከ1ኛ እስከ 8ኛ ክፍል አሁን ዝግጁ ናቸው።'},
  pick:{en:'Choose your grade',am:'ክፍላችሁን ምረጡ'},
  grade:{en:'Grade',am:'ክፍል'},
  g3:{en:'Grade 3',am:'3ኛ ክፍል'},
@@ -133,7 +133,7 @@ const T={
  teacher:{en:'For teachers and parents: each chapter follows the student textbook of the Amhara Region Education Bureau. Stars are saved on this device only. Use the language button to switch every page between Amharic and English.',am:'ለመምህራንና ለወላጆች፦ እያንዳንዱ ምዕራፍ የአማራ ክልል ትምህርት ቢሮ የ3ኛ ክፍል መጽሐፍን ይከተላል። ኮከቦች የሚቀመጡት በዚህ መሣሪያ ላይ ብቻ ነው። እያንዳንዱን ገጽ በአማርኛና በእንግሊዝኛ ለመቀያየር የቋንቋ ቁልፉን ተጠቀሙ።'}
 };
 const UNITS=/*UNITS*/{};
-const GR=/*GR*/3,PFX=/*PFX*/'',ROOT=/*ROOT*/'';const AVAIL={1:'grade-1/',2:'grade-2/',3:'',4:'grade-4/',5:'grade-5/',6:'grade-6/',7:'grade-7/'};
+const GR=/*GR*/3,PFX=/*PFX*/'',ROOT=/*ROOT*/'';const AVAIL={1:'grade-1/',2:'grade-2/',3:'',4:'grade-4/',5:'grade-5/',6:'grade-6/',7:'grade-7/',8:'grade-8/'};
 /*GRADEDATA*/
 SUBJECTS.forEach(s=>s.chs.forEach((c,i)=>{const id=s.key+'-'+(i+1);if(UNITS[id]){c[1]=id+'.html';c[2]=UNITS[id]}else{c.length=1}}));
 const doneCount=(file,n)=>{const id=file.replace('.html','');const d=store.get('g3-done-'+PFX+id,{});return Math.min(n,Object.keys(d).filter(k=>d[k]).length)};
@@ -159,7 +159,7 @@ function render(){
  document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>{lang=b.dataset.lang;store.set('g3-lang',lang);render()});
 }
 /* subject accents on cards */
-const st=document.createElement('style');st.textContent=SUBJECTS.map(s=>`.subj[data-subj="${s.key}"]{--accent:var(--${({math:'blue',amharic:'clay',english:'plum',env:'green',moral:'sun',health:'teal',art:'plum',geez:'clay',science:'green',social:'clay',cte:'sun',it:'blue',l1:'sun',l2:'green',l3:'teal',l4:'blue',l5:'plum',l6:'clay',l7:'blue',l8:'green'})[s.key]});--accent-soft:var(--${({math:'blue',amharic:'clay',english:'plum',env:'green',moral:'sun',health:'teal',art:'plum',geez:'clay',science:'green',social:'clay',cte:'sun',it:'blue',l1:'sun',l2:'green',l3:'teal',l4:'blue',l5:'plum',l6:'clay',l7:'blue',l8:'green'})[s.key]}-soft)}`).join('');document.head.appendChild(st);
+const st=document.createElement('style');st.textContent=SUBJECTS.map(s=>`.subj[data-subj="${s.key}"]{--accent:var(--${({math:'blue',amharic:'clay',english:'plum',env:'green',moral:'sun',health:'teal',art:'plum',geez:'clay',science:'green',social:'clay',citizen:'teal',cte:'sun',it:'blue',l1:'sun',l2:'green',l3:'teal',l4:'blue',l5:'plum',l6:'clay',l7:'blue',l8:'green'})[s.key]});--accent-soft:var(--${({math:'blue',amharic:'clay',english:'plum',env:'green',moral:'sun',health:'teal',art:'plum',geez:'clay',science:'green',social:'clay',citizen:'teal',cte:'sun',it:'blue',l1:'sun',l2:'green',l3:'teal',l4:'blue',l5:'plum',l6:'clay',l7:'blue',l8:'green'})[s.key]}-soft)}`).join('');document.head.appendChild(st);
 render();
 window.addEventListener('pageshow',render);
 })();
