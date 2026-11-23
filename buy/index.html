@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buy Fidel Fun! on Amazon · AMBKidsJoy</title>
+<meta name="robots" content="noindex">
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background:#FFF6D6; color:#2b2b38; text-align:center; padding: 40px 20px; }
+  h1 { color:#E0453A; margin: 10px 0; }
+  a.btn { display:inline-block; margin: 6px; padding: 10px 16px; border-radius: 10px; background:#fff; border:2px solid #e0e3ea; color:#2b2b38; text-decoration:none; font-weight:600; }
+  a.main { background:#FF9900; border-color:#FF9900; color:#111; font-size:1.1rem; }
+</style>
+</head>
+<body>
+  <h1>Fidel Fun! ፊደል በደስታ</h1>
+  <p>Taking you to Amazon… If nothing happens, choose your store:</p>
+  <p><a class="btn main" id="main" href="#">Open Amazon</a></p>
+  <p id="all"></p>
+  <p><a href="../books/fidel-fun/">← Back to the book page and free sample</a></p>
+<script>
+  // ▼ EDIT HERE. When Amazon gives your book page links, paste them in place of the search links (optional).
+  var ISBN = "9798144322621";
+  var ASIN = "B0HSLX7T7N";   // Amazon product ID of the paperback
+  var STORES = {
+    US: "https://www.amazon.com/dp/" + ASIN,
+    UK: "https://www.amazon.co.uk/dp/" + ASIN,
+    DE: "https://www.amazon.de/dp/" + ASIN,
+    IT: "https://www.amazon.it/dp/" + ASIN,
+    FR: "https://www.amazon.fr/dp/" + ASIN,
+    ES: "https://www.amazon.es/dp/" + ASIN,
+    NL: "https://www.amazon.nl/dp/" + ASIN,
+    BE: "https://www.amazon.com.be/dp/" + ASIN,
+    IE: "https://www.amazon.ie/dp/" + ASIN,
+    CA: "https://www.amazon.ca/dp/" + ASIN,
+    SE: "https://www.amazon.se/dp/" + ASIN,
+    PL: "https://www.amazon.pl/dp/" + ASIN,
+    JP: "https://www.amazon.co.jp/dp/" + ASIN
+  };
+  function pick() {
+    var tz = ""; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+    var lang = (navigator.language || "en-US");
+    var region = (lang.split("-")[1] || "").toUpperCase();
+    var byTz = { "Europe/London":"UK", "Europe/Dublin":"IE", "Europe/Berlin":"DE", "Europe/Vienna":"DE", "Europe/Zurich":"DE",
+      "Europe/Rome":"IT", "Europe/Paris":"FR", "Europe/Madrid":"ES", "Europe/Amsterdam":"NL", "Europe/Brussels":"BE",
+      "Europe/Stockholm":"SE", "Europe/Oslo":"SE", "Europe/Copenhagen":"SE", "Europe/Warsaw":"PL", "Asia/Tokyo":"JP" };
+    if (byTz[tz]) return byTz[tz];
+    if (tz.indexOf("America/Toronto") === 0 || tz.indexOf("America/Vancouver") === 0 || tz.indexOf("America/Edmonton") === 0 || tz.indexOf("America/Winnipeg") === 0 || tz.indexOf("America/Halifax") === 0) return "CA";
+    if (region === "GB") return "UK";
+    if (STORES[region]) return region;
+    return "US";
+  }
+  var key = pick(), url = STORES[key];
+  document.getElementById("main").href = url;
+  document.getElementById("main").textContent = "Open Amazon " + (key === "US" ? ".com" : key);
+  var names = { US:"USA", UK:"UK", DE:"Germany", IT:"Italy", FR:"France", ES:"Spain", NL:"Netherlands", BE:"Belgium", IE:"Ireland", CA:"Canada", SE:"Sweden", PL:"Poland", JP:"Japan" };
+  document.getElementById("all").innerHTML = Object.keys(STORES).map(function (k) {
+    return '<a class="btn" href="' + STORES[k] + '">' + names[k] + '</a>'; }).join("");
+  setTimeout(function () { window.location.replace(url); }, 900);
+</script>
+<script data-goatcounter="https://ambkidsjoy.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -14,7 +14,7 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;600;700&display=swap">')
 HEAD = '<!doctype html><html lang="am"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">'
 
-for f in ['style.css', 'engine.js', 'icons.js', 'author.js', 'summaries.js', 'summary.js']:
+for f in ['style.css', 'engine.js', 'icons.js', 'author.js', 'book-promo.js', 'summaries.js', 'summary.js']:
     shutil.copy(os.path.join(SRC, f), os.path.join(DIST, f))
 for f in glob.glob(os.path.join(SRC, 'units', '*.js')):
     shutil.copy(f, os.path.join(DIST, 'units', os.path.basename(f)))

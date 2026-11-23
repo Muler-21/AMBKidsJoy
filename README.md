@@ -34,6 +34,18 @@
 ▶ **YouTube lessons:** https://www.youtube.com/@kidseducation9276  
 ▶ **Source code:** https://github.com/Muler-21/AMBKidsJoy
 
+## 📘 New book: Fidel Fun! ፊደል በደስታ
+
+<a href="https://muler-21.github.io/AMBKidsJoy/buy/"><img src="books/fidel-fun/img/cover-thumb.jpg" width="120" align="left" alt="Fidel Fun! cover"></a>
+
+**Fidel Fun! My First Amharic–English Alphabet Workbook** (ages 4–7, full colour, 86 pages): all 34 fidel letters and their 7 sounds, tracing pages, picture words, games and a certificate. Every page of AMBKidsJoy now shows a card with a QR code and a buy button.
+
+- 🛒 **Buy the paperback on Amazon:** https://muler-21.github.io/AMBKidsJoy/buy/ (opens your country's Amazon store)
+- ⬇ **Free 9-page sample:** https://muler-21.github.io/AMBKidsJoy/books/fidel-fun/
+- 🔔 **Subscribe on YouTube:** https://www.youtube.com/@kidseducation9276?sub_confirmation=1
+
+<br clear="left">
+
 ## Author
 
 **Mulusew Kassa Bitew**, Postdoctoral Research Fellow, University of Molise, Italy\
@@ -110,6 +122,8 @@ Go to **Settings → Pages**, choose **Deploy from a branch**, then select `main
 - `<subject>-<chapter>.html`: one page per chapter, for example `env-3.html`.
 - `units/*.js`: the content of each chapter.
 - `engine.js`, `icons.js`, `author.js`, `style.css`: the shared engine, drawings, author card and design.
+- `book-promo.js`: the Fidel Fun! book card (QR code and Amazon button) shown above the author card on every page.
+- `books/fidel-fun/`: the book page with the free sample. `buy/`: sends visitors to their own country's Amazon store.
 - `source/`: editable source files and `build.py`. To rebuild the site, run `python3 build.py math-1-src.html` inside `source/`.
 
 ## Sources and acknowledgement

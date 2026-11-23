@@ -1,6 +1,8 @@
 /* AMBKidsJoy — author & channel card, added to the bottom of every page. */
 (function(){
 const ME=(document.currentScript&&document.currentScript.src)||'';const CITE=ME?ME.replace(/author\.js.*$/,'cite.html'):'/AMBKidsJoy/cite.html';
+/* Fidel Fun! book card (book-promo.js), shown above this author card on every page */
+if(!window.__ambBookPromo){const bp=document.createElement('script');bp.src=ME?ME.replace(/author\.js.*$/,'book-promo.js?v=20261123'):'/AMBKidsJoy/book-promo.js?v=20261123';bp.defer=true;document.head.appendChild(bp);}
 const YT='https://www.youtube.com/@kidseducation9276?sub_confirmation=1';
 const GH='https://muler-21.github.io/';
 const T={
